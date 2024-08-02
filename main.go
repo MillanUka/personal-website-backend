@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"millanuka.com/personal-website-backend/routes"
 )
 
 func rootUrl(c *gin.Context) {
@@ -11,8 +12,7 @@ func rootUrl(c *gin.Context) {
 }
 
 func main() {
-	router := gin.Default()
-	router.GET("/", rootUrl)
+	router := routes.InitRouter()
 
 	router.Run("localhost:8000")
 }

@@ -1,4 +1,4 @@
-module www.millanuka.com/personal-website-backend
+module millanuka.com/personal-website-backend
 
 go 1.22.5
 
