@@ -8,7 +8,8 @@ import (
 func InitRouter() *gin.Engine {
 	router := gin.New()
 	router.Use(gin.Logger())
-	router.POST("/send-user-response", controllers.AddUserResponse)
+	router.Use(gin.Recovery())
 
+	router.POST("/send-user-response", controllers.AddUserResponse)
 	return router
 }
